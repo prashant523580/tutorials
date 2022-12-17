@@ -1,8 +1,21 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useEffect, useState } from 'react'
 import styles from '../styles/Home.module.css'
-export default function Home() {
+export default function Blogs() {
+const [blogsData,setBlogsData] = useState<any>([]);
+    useEffect( () =>{
+            fetch("/api/blog")
+            .then((res) => {
+               return res.json()
+            }).then((data) =>{
+                setBlogsData(data)
+            })
+    },[])
+    useEffect(()=>{
+        console.log(blogsData)
+    },[blogsData])
   return (
     <div className={styles.container}>
       <Head>
@@ -22,19 +35,17 @@ export default function Home() {
         </p>
 
         <div className={styles.grid}>
-          <Link href="/blogs/document" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
+            {
+               blogsData.length > 0 && blogsData.map((blog : any,ind : any) => {
+                    return(
+
+          <Link key={ind} href={`/blogs/${blog.title}`} className={styles.card}>
+            <h2>{blog.title} &rarr;</h2>
+            <p>{blog.description}</p>
           </Link>
-
-          <Link href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </Link>
-
-        
-
-         
+                    )
+                })
+            }
         </div>
       </main>
 

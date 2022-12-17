@@ -28,10 +28,13 @@ export default function Contact() {
                     <p className={styles.description}>
                         <PhoneAndroid /> +977-9864567389
                     </p>
+                    <p className={styles.description}>
+                        example@gmail.com
+                    </p>
 
                 </div>
                 <div className={styles.grid}>
-                    <h1 className='contact-header'>Get in Touch.</h1>
+                        <h1 className='contact-header'>Get in Touch.</h1>
                     <style jsx>
                         {`
                         .contact-header{

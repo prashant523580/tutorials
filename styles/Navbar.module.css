@@ -1,10 +1,10 @@
 .nav{
-    padding: 13px 12px;
+    padding: 10px 12px;
     background: black;
     color: white;
     display: flex;
-    align-items:center;
-    justify-content: space-around;
+    align-items: center;
+    justify-content: space-between;
   }
   .logo{
     color: var(--main-color);
@@ -35,15 +35,24 @@
       bottom:0;
       background: white; */
     }
-
+    .menu{
+        display: none;
+    }
+    .menu button{
+        min-width: 40px;
+        height: 40px;
+        border-radius: 40%;
+        border: 0;
+        outline: 0;
+    }
     @media screen and (max-width:600px) {
         .nav{
-            padding: 13px 12px;
+            padding: 8px 10px;
             background: black;
             color: white;
             display: flex;
             align-items:center;
-            justify-content: space-around;
+            justify-content: space-between;
           }
           .logo{
             color: var(--main-color);
@@ -59,12 +68,16 @@
               background: black;
               z-index: 9999;
               justify-content: flex-start;
+              transition: .3s all ease;
             }
             .link{
                 margin: .3em 0;
             }
             .link.active{
              
+            }
+            .menu{
+                display: block;
             }
             
         

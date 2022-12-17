@@ -2,10 +2,27 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
+import { useEffect } from 'react'
 import styles from '../../styles/Home.module.css'
-
-export default function Slug() {
+// export function getStaticPaths(ctx: any) {
+//     const paths = ctx;
+//     return{
+//         props:{
+//             paths,
+//             fallback: false
+//         }
+//     }
+// }
+// export function getStaticProps(ctx: any){
+//     return{
+//         props: ctx
+//     }
+// }
+export default function Slug({ctx}: any) {
     const router = useRouter();
+    useEffect(() => {
+        console.log(ctx)
+    },[ctx])
   return (
     <div className={styles.container}>
       <Head>
