@@ -7,15 +7,7 @@ interface PropsTypes{
   openDrawer :boolean
   navLinkRef : any
 }
-interface RefTypes extends PropsTypes  {
 
-}
-
-const LinkButton = React.forwardRef(({onClick,href} :any , ref : any) => {
-    return(
-      <a href={href} onClick={onClick} ref={ref}>={"click"}</a>
-    )
-})
 class  Navbar extends Component<any,PropsTypes,WithRouterProps> {
   constructor(props : any){
     super(props)
@@ -83,11 +75,7 @@ class  Navbar extends Component<any,PropsTypes,WithRouterProps> {
                   )
                 })
               }
-                {/* <Link className={this.props.router.pathname == "/" ? "active" : ""} href={"/blogs"}> blogs</Link>
-                <Link className={this.props.router.pathname == "/" ? "active" : ""} href={"/tutorials"}>tutorials</Link>
-                <Link className={this.props.router.pathname == "/" ? "active" : ""} href={"/contact"}> contact</Link>
-                <Link className={this.props.router.pathname == "/" ? "active" : ""} href={"/about"}>about</Link> */}
-            </div>
+               </div>
             <div className={styles.menu}>
                 <button onClick={() => this.setState({openDrawer : !this.state.openDrawer})}> <MenuIcon/></button>
             </div>
