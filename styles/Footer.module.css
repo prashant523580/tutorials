@@ -1,8 +1,9 @@
 .footer{
     padding: 40px;
     background: black;
-    color: rgb(153, 15, 15);
+    color: rgb(170, 17, 17);
     position: relative;
+    margin-top: auto;
 }
 .footer p{
 text-align: right;

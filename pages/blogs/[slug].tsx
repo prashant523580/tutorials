@@ -1,7 +1,7 @@
       
 import Head from 'next/head'
 import { useRouter } from 'next/router'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import Container from '../../components/container/Container'
 import styles from '../../styles/Home.module.css'
 // export function getStaticPaths(ctx: any) {
@@ -18,11 +18,18 @@ import styles from '../../styles/Home.module.css'
 //         props: ctx
 //     }
 // }
-export default function Slug({ctx}: any) {
+export default function Slug() {
     const router = useRouter();
+    const [blogdata,setBlogData] = useState<any>([]);
     useEffect(() => {
-        console.log(ctx)
-    },[ctx])
+      fetch(`/api/blogBySlug?slug=${router.query.slug}`)
+      .then((res) => {
+         return res.json()
+      }).then((data) =>{
+        console.log(data)
+          setBlogData(JSON.parse(data))
+      })
+    },[router.query.slug])
   return (
     <Container>
       <Head>
@@ -33,13 +40,13 @@ export default function Slug({ctx}: any) {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to {router.query.slug}
-        </h1>
+          {blogdata.title} - course       </h1>
 
       
 
         <div className={styles.grid}>
-
+                <h2>{blogdata.title}</h2>
+                <p>{blogdata.description}</p>
         </div>
       </main>
 

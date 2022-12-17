@@ -39,7 +39,7 @@ const [blogsData,setBlogsData] = useState<any>([]);
                blogsData.length > 0 && blogsData.map((blog : any,ind : any) => {
                     return(
 
-          <Link key={ind} href={`/blogs/${blog.title}`} className={styles.card}>
+          <Link key={ind} href={`/blogs/${blog.slug}`} className={styles.card}>
             <h2>{blog.title} &rarr;</h2>
             <p>{blog.description}</p>
           </Link>

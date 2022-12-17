@@ -10,14 +10,16 @@ export default class Footer extends Component {
                 position : absolute ;
                 left: -10% ;
                 right: 0 ;
-                bottom: 0 ;
-                width: 200px;
-                height: 200px;
-                background :black ;
-                border-radius : 50% ;
+                bottom: 0% ;
                 z-index: -1;
-                ;
-               
+              }
+              .circle{
+              width: 700px;
+              height: 150px;
+              // background :var(--main-color);
+              background: black;
+              border-radius : 50% ;
+
             }
             `}
         </style>
