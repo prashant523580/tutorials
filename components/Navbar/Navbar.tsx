@@ -77,7 +77,7 @@ class  Navbar extends Component<any,PropsTypes,WithRouterProps> {
               }
                </div>
             <div className={styles.menu}>
-                <button onClick={() => this.setState({openDrawer : !this.state.openDrawer})}> <MenuIcon/></button>
+                <button aria-label={"menu"} onClick={() => this.setState({openDrawer : !this.state.openDrawer})}> <MenuIcon/></button>
             </div>
         </nav>
       </>

@@ -67,8 +67,8 @@
     height: 500px; */
 }
   .grid{
-      max-width: 800px;
-      z-index: 1;
+      /* max-width: 00px; */
+      /* z-index: 1; */
     text-align: center;
 }
   .flex_wrap{

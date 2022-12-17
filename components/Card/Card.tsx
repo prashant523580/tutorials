@@ -12,7 +12,7 @@ export default class Card extends Component<PropsTypes> {
                 `
                 .card{
                     width: 300px;
-                    margin: .3em auto;
+                    margin: .3em .6rem;
                     background: rgba(225,225,225,0.6);
                     padding: .3em .6em;
                 }

@@ -5,10 +5,10 @@
 
 @keyframes fade-in {
     from{
-        transform: translateY(200px);
+        transform: translateX(200px);
         opacity: 0;
     }to{
         opacity: 1;
-        transform: translateY(0);
+        transform: translateX(0);
     }
 }
