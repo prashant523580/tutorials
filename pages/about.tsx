@@ -1,6 +1,4 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import { Parallax } from 'react-scroll-parallax'
 import Card from '../components/Card/Card'
 import Container from '../components/container/Container'
 import styles from '../styles/About.module.css'

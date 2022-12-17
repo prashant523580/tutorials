@@ -1,12 +1,8 @@
 import { PhoneAndroid } from '@mui/icons-material'
 import Head from 'next/head'
-import Image from 'next/image'
-import { Parallax } from 'react-scroll-parallax'
 import Card from '../components/Card/Card'
 import Container from '../components/container/Container'
 import styles from '../styles/About.module.css'
-
-import AnimatedStyles from "../styles/Animation.module.css";
 export default function Contact() {
     return (
         <Container>
