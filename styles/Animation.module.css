@@ -1,4 +1,4 @@
-.fade_in{
+.fade_in_right_to_left{
     animation: fade-in .5s ease;
     z-index: 2;
 }

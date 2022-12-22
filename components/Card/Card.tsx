@@ -10,10 +10,10 @@ export default class Card extends Component<PropsTypes> {
         <style jsx>
             {
                 `
-                .card{
+                .blog-card{
                     width: 300px;
                     margin: .3em .6rem;
-                    background: rgba(225,225,225,0.6);
+                    background: rgba(225,225,225,0.7);
                     padding: .3em .6em;
                 }
                 .header{
@@ -34,7 +34,7 @@ export default class Card extends Component<PropsTypes> {
                 `
             }
         </style>
-      <div className='card'>
+      <div className='blog-card'>
             <div className="header">
                 <div className="icon">  </div><h2>{this.props.title}</h2>
             </div>

@@ -7,7 +7,7 @@ interface PropsTypes{
 export default class Container extends Component<PropsTypes> {
   render() {
     return (
-        <div className={styles.container +" "+ AnimatedStyle.fade_in} >
+        <div className={styles.container +" "+ AnimatedStyle.fade_in_right_to_left} >
             {this.props.children}
         </div>
     )

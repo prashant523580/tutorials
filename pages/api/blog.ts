@@ -3,7 +3,7 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 import { promises as fs } from 'fs';
 import path from 'path';
 type Data = {
-  name: string
+  name: string,
 }
 
 export default async function handler(
@@ -12,6 +12,9 @@ export default async function handler(
 ) {
   let jsonDirectory = path.join(process.cwd(), "json/tutorials");
   let data: any = await fs.readdir(jsonDirectory);
+  // let numb : any = parseInt();
+  // data = data.slice(0,numb);
+  // console.log(typeof numb)
   let blogs: any = [];
   let blog : any;
   for (var i = 0; i < data.length; i++) {

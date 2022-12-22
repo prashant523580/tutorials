@@ -35,15 +35,11 @@ class  Navbar extends Component<any,PropsTypes,WithRouterProps> {
         label : "home",
         path:"/"
       },
-      
-      {
-        label : "tutorials",
-        path:"/tutorials"
-      },
       {
         label : "blogs",
-        path:"/blogs"
+        path:"/allblog"
       },
+    
       {
         label : "about us",
         path:"/about"
